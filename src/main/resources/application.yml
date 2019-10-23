@@ -1,0 +1,18 @@
+server:
+  port: 9000
+    
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        person-in:
+ # which we are going to send our payload to this Topic     
+          destination: Hello-Kafka
+          contentType: application/json
+        person-out:
+# which we are going to consume payload form this topic 
+          destination: Hello-Kafka
+          contentType: application/json
