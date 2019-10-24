@@ -11,7 +11,10 @@ zookeeper-server-start.bat ../../config/zookeeper.properties
 kafka-server-start.bat ../../config/server.properties 
 
 # to create Topic in kafka fire command at  F:\soft\kafka_2.12-2.3.0\bin\windows
-kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic Hello-Kafka
+kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic new.person
+
+# command to view list of topic
+kafka-topics.bat --list --bootstrap-server localhost:9092
 
 
 
@@ -20,3 +23,5 @@ which contain consumer and producer for perticuler topic
 
 
 # note always match kafka and spring boot version should compatible 
+
+
